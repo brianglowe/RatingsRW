@@ -12,7 +12,15 @@ class PlayerDetailsViewController: UITableViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var detailLabel: UILabel!
+
     
+    // this holds the value of the selected row, with a default value of "Chess" so there is always a selection
+    var game:String = "Chess" {
+        didSet {
+            detailLabel.text? = game
+        }
+    }
+
     var player:Player?
 
     override func viewDidLoad() {
@@ -41,6 +49,25 @@ class PlayerDetailsViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SavePlayerDetail" { //segues only on the SavePlayerDetail segue
             player = Player(name: nameTextField.text!, game: "Chess", rating: 1)
+        }
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        print("init PlayerDetailsViewController")
+        super.init(coder: aDecoder)
+    }
+    
+    deinit {
+        print("deinit PlayerDetailsViewController")
+    }
+    
+    /* This code will get executed once the user selects a game from the Choose Game Scene. This method 
+    updates both the label on screen and the game property based on the game selected. The unwind segue 
+    also pops GamePickerViewController off the navigation controller’s stack. */
+    @IBAction func unwindWithSelectedGame(segue:UIStoryboardSegue) {
+        if let gamePickerViewController = segue.sourceViewController as? GamePickerViewController,
+            selectedGame = gamePickerViewController.selectedGame {
+                game = selectedGame
         }
     }
     
