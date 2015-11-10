@@ -15,6 +15,7 @@
 		D35BDE671BF234B00070DDC1 /* RatingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35BDE661BF234B00070DDC1 /* RatingsTests.swift */; };
 		D35BDE721BF234B00070DDC1 /* RatingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35BDE711BF234B00070DDC1 /* RatingsUITests.swift */; };
 		D35BDE801BF254500070DDC1 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35BDE7F1BF254500070DDC1 /* PlayersViewController.swift */; };
+		D35BDE821BF254B10070DDC1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35BDE811BF254B10070DDC1 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D35BDE711BF234B00070DDC1 /* RatingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsUITests.swift; sourceTree = "<group>"; };
 		D35BDE731BF234B00070DDC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D35BDE7F1BF254500070DDC1 /* PlayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
+		D35BDE811BF254B10070DDC1 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				D35BDE511BF234B00070DDC1 /* AppDelegate.swift */,
+				D35BDE811BF254B10070DDC1 /* Player.swift */,
+				D35BDE7F1BF254500070DDC1 /* PlayersViewController.swift */,
 				D35BDE531BF234B00070DDC1 /* ViewController.swift */,
 				D35BDE551BF234B00070DDC1 /* Main.storyboard */,
 				D35BDE581BF234B00070DDC1 /* Assets.xcassets */,
 				D35BDE5A1BF234B00070DDC1 /* LaunchScreen.storyboard */,
 				D35BDE5D1BF234B00070DDC1 /* Info.plist */,
-				D35BDE7F1BF254500070DDC1 /* PlayersViewController.swift */,
 			);
 			path = Ratings;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D35BDE821BF254B10070DDC1 /* Player.swift in Sources */,
 				D35BDE541BF234B00070DDC1 /* ViewController.swift in Sources */,
 				D35BDE521BF234B00070DDC1 /* AppDelegate.swift in Sources */,
 				D35BDE801BF254500070DDC1 /* PlayersViewController.swift in Sources */,
