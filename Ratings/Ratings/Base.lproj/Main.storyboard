@@ -65,7 +65,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PlayerCell" rowHeight="60" id="UJA-Ur-3hu">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PlayerCell" rowHeight="60" id="UJA-Ur-3hu" customClass="PlayerCellTableViewCell" customModule="Ratings" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UJA-Ur-3hu" id="crF-Oy-aCx">
@@ -112,6 +112,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="gameLabel" destination="XuS-eM-Qed" id="ThR-co-ywF"/>
+                                    <outlet property="nameLabel" destination="fEG-G6-R21" id="h7R-J3-MgV"/>
+                                    <outlet property="ratingImageView" destination="Fy0-Cz-bBT" id="Xsf-nc-Br0"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

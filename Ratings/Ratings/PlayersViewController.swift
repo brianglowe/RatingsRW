@@ -38,6 +38,17 @@ class PlayersViewController: UITableViewController {
         return players.count
     }
     
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath)
+        -> UITableViewCell {
+            let cell = tableView.dequeueReusableCellWithIdentifier("PlayerCell", forIndexPath: indexPath)
+                as! PlayerCellTableViewCell
+            
+            let player = players[indexPath.row] as Player
+            cell.player = player
+            return cell
+    }
+    
+    /* the code below has been updated to fullfill the custom tableview Cell we created. The new code is above
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("PlayerCell", forIndexPath: indexPath)
         //1_(lines above) dequeueReusableCellWithIdentifier will dequeue an existing cell with the reuse identifier PlayerCell if available or create a new one if not.
@@ -57,6 +68,8 @@ class PlayersViewController: UITableViewController {
         }
         return cell
     }
+    */
+
     /*
     the code below was used before a custom table view cell was created
     it shows the changes to cellForRowAtIndexPath required to used custom TB cell
@@ -72,9 +85,5 @@ class PlayersViewController: UITableViewController {
     }
     */
 
-    func imageForRating(rating:Int) -> UIImage? {
-        let imageName = "\(rating)Stars"
-        return UIImage(named: imageName)
-    }
     
 }
